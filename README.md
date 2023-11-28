@@ -4,6 +4,12 @@ This tool was written in order to not have to deal with 6 actions just to make o
 
 So what does this application do? It will filter the EC2 Launch Templates for a given account and create a folder system for you to work with the various documents. It will create a folder called `Original` in the working directory, the application will grab the latest default working copy of all MGN templates with the exception of the default template that MGN uses as it's starting point for all new source servers, reason is changing this is not done often enough to warrant using it in this method. I'll be adding an enhancement later if this is a future requirement. The other working folder `Modified` will be empty. The actions required are simple. Copy the templates from the `Original` folder into the `Modified` folder and make your changes. The application doesn't care about the `Original` folder. However if you run the tool it will overwrite the documents with the latest each time. So if you make a mistake or need a fresh copy just execute the commands below to grab a new working copy.
 
+## To Do
+
+- [ ] Add ability to change the default template used by MGN
+- [ ] Add functionality to pipeline this application
+- [ ] Add this functionality to an overall MGN tool
+
 ## Commands
 
 Arguments used for this tool
