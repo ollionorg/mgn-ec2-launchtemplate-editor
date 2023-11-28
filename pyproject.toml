@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "ec2-launch-template"
-version = "0.1.0"
-description = ""
+name = "mgn-ec2-launchtemplate-editor"
+version = "1.0.0"
+description = "Launch template editor for AWS Migration Manager"
 authors = ["David Cunliffe <dcunliffe@2ndwatch.com>"]
 readme = "README.md"
 

@@ -1,0 +1,88 @@
+{
+    "LaunchTemplateId": "lt-022674932c3945f23",
+    "LaunchTemplateName": "created-and-used-by-application-migration-service-s-49266e2ccf90f932a-231010-155220",
+    "VersionNumber": 34,
+    "CreateTime": "2023-11-21 21:47:38+00:00",
+    "CreatedBy": "arn:aws:iam::99999999999:user/mgn_manager",
+    "DefaultVersion": true,
+    "LaunchTemplateData": {
+        "IamInstanceProfile": {
+            "Arn": "arn:aws:iam::999999999999:instance-profile/AmazonSSMRoleForInstancesQuickSetup"
+        },
+        "BlockDeviceMappings": [
+            {
+                "DeviceName": "c:0",
+                "Ebs": {
+                    "Iops": 3000,
+                    "VolumeSize": 128,
+                    "VolumeType": "gp3"
+                }
+            },
+            {
+                "DeviceName": "e:0",
+                "Ebs": {
+                    "Iops": 3000,
+                    "VolumeSize": 1024,
+                    "VolumeType": "gp3"
+                }
+            }
+        ],
+        "NetworkInterfaces": [
+            {
+                "AssociatePublicIpAddress": false,
+                "DeleteOnTermination": true,
+                "DeviceIndex": 0,
+                "Groups": [
+                    "sg-05405a677a6f99999"
+                ],
+                "SubnetId": "subnet-0c50099992e55eb87"
+            }
+        ],
+        "InstanceType": "r5.xlarge",
+        "KeyName": "ec2-ssh-key",
+        "TagSpecifications": [
+            {
+                "ResourceType": "instance",
+                "Tags": [
+                    {
+                        "Key": "AWSApplicationMigrationServiceManaged",
+                        "Value": "mgn.amazonaws.com"
+                    },
+                    {
+                        "Key": "AWSApplicationMigrationServiceManaged",
+                        "Value": "mgn.amazonaws.com"
+                    },
+                    {
+                        "Key": "AWSApplicationMigrationServiceSourceServerID",
+                        "Value": "s-49266e2ccf90f932a"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "EXAMPLE"
+                    }
+                ]
+            },
+            {
+                "ResourceType": "volume",
+                "Tags": [
+                    {
+                        "Key": "AWSApplicationMigrationServiceManaged",
+                        "Value": "mgn.amazonaws.com"
+                    },
+                    {
+                        "Key": "AWSApplicationMigrationServiceSourceServerID",
+                        "Value": "s-49266e2ccf90f932a"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "EXAMPLE"
+                    }
+                ]
+            }
+        ],
+        "PrivateDnsNameOptions": {
+            "EnableResourceNameDnsARecord": false,
+            "EnableResourceNameDnsAAAARecord": false
+        }
+    }
+}
