@@ -2,7 +2,7 @@
 
 This tool was written in order to not have to deal with 6 actions just to make one minor change to a launch configuration of a Migration Manager Launch Template. Basic order of operations is that you will speak with client about a change. Locate the Source Server, Click on the Launch Templates tab, Then click on Modify Launch Template which brings you to EC2 Launch Templates and Finally you make your adjustments and save. But if you make a mistake you have to either know which template you were working on to add a new version and set it as default 3 actions. Not to mention you will have to perform the prior steps over and over if were talking about multiple servers.
 
-So what does this application do? It will filter the EC2 Launch Templates for a given account and create a folder system for you to work with the various documents. It will create a folder called `Original` in the working directory, the application will grab the latest default working copy of all MGN templates with the exception of the default template that MGN uses as it's starting point for all new source servers, reason is changing this is not done often enough to warrant using it in this method. I'll be adding an enhancement later if this is a future requirement. The other working folder `Modified` will be empty. The actions required are simple. Copy the templates from the `Original` folder into the `Modified` folder and make your changes. The application doesn't care about the `Original` folder. However if you run the tool it will overwrite the documents with the latest each time. So if you make a mistake or need a fresh copy just execute the commands below to grab a new working copy.
+So what does this application do? It will filter the EC2 Launch Templates for a given account and create a folder system for you to work with the various documents. It will create a folder called `Original` in the working directory, the application will grab the latest default working copy of all MGN templates with the exception of the default template that MGN uses as it's starting point for all new source servers, reason is changing this is not done often enough to warrant using it in this method. I'll be adding an enhancement later if this is a future requirement. The other working folder `Modified` will be empty. The actions required are simple. Copy the templates from the `Original` folder into the `Modified` folder and make your changes. The application doesn't care about the `Original` folder. However if you run the tool it will overwrite the documents with the latest each time. So if you make a mistake or need a fresh copy just execute the commands below to grab a new working copy. Review the Examples Directory for a working example or see the workflow below.
 
 ## To Do
 
@@ -86,15 +86,17 @@ Working Directory Structure
 
 ```bash
 .
+├── EXAMPLE
+│   ├── Modified
+│   │   └── EXAMPLE.json
+│   └── Original
+│       └── EXAMPLE.json
 ├── LICENSE
-├── Modified
-│   └── EXAMPLE.json
-├── Original
-│   └── EXAMPLE.json
 ├── README.md
 ├── main.py
 ├── poetry.lock
-└── pyproject.toml
+├── pyproject.toml
+└── requirements.txt
 ```
 
 ## License
