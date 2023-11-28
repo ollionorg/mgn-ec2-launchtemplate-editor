@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ec2-launch-template"
+version = "0.1.0"
+description = ""
+authors = ["David Cunliffe <dcunliffe@2ndwatch.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+boto3 = "^1.29.3"
+
+[tool.poetry.group.dev.dependencies]
+boto3 = "^1.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
