@@ -96,3 +96,7 @@ Working Directory Structure
 ├── poetry.lock
 └── pyproject.toml
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
